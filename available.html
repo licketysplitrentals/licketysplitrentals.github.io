@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lickety Split | Machine Availability</title>
+
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.11/index.global.min.css"
+  />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo" >
+      <a href="/"><img src="/assets/img/LicketySplitLogo.svg" alt="Licket Split Logo" /></a>
+    </div>
+    <nav class="desktop-nav">
+      
+      <a href="/products.html">Products</a>
+      <a href="/available.html" class="active">Book</a>
+      <a href="/rental_agreement.html">Agreement</a>
+    </nav>
+
+    <button class="menu-toggle" aria-label="Open menu">
+      Menu
+    </button>
+
+    <nav class="mobile-nav">
+      <button class="close-menu menu-toggle">
+        Close Menu
+      </button>
+      <a href="/" class="cta">Home</a>
+      
+      <a href="/products.html" class="cta">Products</a>
+      <a href="/available.html" class="cta active">Book</a>
+      <a href="/rental_agreement.html" class="cta">Agreement</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Machine Availability</h1>
+
+    <div class="availability-layout">
+      <div class="card">
+        <label for="machineSelect">Select Machine</label>
+        <select id="machineSelect"></select>
+        <div id="calendar"></div>
+      </div>
+
+      <div class="card">
+        <form id="requestForm">
+          <label>*First Name</label>
+          <input type="text" id="firstName" required>
+
+          <label>*Last Name</label>
+          <input type="text" id="lastName" required>
+
+          <label>*Email</label>
+          <input type="email" id="email" required>
+
+          <label>Phone Number</label>
+          <input type="tel" id="phone">
+
+          <label>*Machine(s)</label>
+          <select id="machines" multiple required>
+            <option value="Double Swirl">Double Swirl</option>
+          </select>
+
+          <label>*Start Date</label>
+          <input type="date" id="startDate" required>
+
+          <label>*End Date</label>
+          <input type="date" id="endDate" required>
+
+          <label>Vanilla Mix ($20 / bag)</label>
+          <input type="number" id="vanilla_bag" class="mix" value="0">
+
+          <label>Chocolate Mix ($20 / bag)</label>
+          <input type="number" id="chocolate_bag" class="mix" value="0">
+
+          <button type="submit" class="btn">Submit Request</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer id="contact">
+    <p>© 2026 Lickety Split Rentals LLC. Soft Serve Machine Rentals.</p>
+    <p>Contact us at <strong><a href="mailto:licketysplitrentals@gmail.com">licketysplitrentals@gmail.com</a></strong></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="/assets/js/availability.js"></script>
+  <script src="/assets/js/nav-menu.js"></script>
+
+  
+
+</body>
+</html>
